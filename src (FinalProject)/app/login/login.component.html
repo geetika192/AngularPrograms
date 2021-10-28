@@ -1,0 +1,17 @@
+<form [formGroup] = "frmGroup" (ngSubmit)="LoginData(frmGroup.value)">
+    <div>
+        <label>Username</label>
+        <input type="text" formControlName="Username">
+    </div>
+    <div>
+        <label>Password</label>
+        <input type="password" formControlName="Password">
+    </div>
+    <div>
+        <label>Age</label>
+        <input type="number" formControlName="Age">
+    </div>
+    <div>
+        <input type="submit" value="Register">
+    </div>
+</form>

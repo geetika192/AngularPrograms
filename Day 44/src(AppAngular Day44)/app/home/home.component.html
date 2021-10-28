@@ -1,0 +1,75 @@
+<br>
+<br>
+<input type="text" [(ngModel)]="Bid">
+<input type="button" value="SearchBook" (click)="SearchBook()"/>
+
+<div class="container py-5">  
+    <h3 class="text-center text-uppercase">List of Books</h3>  
+    <table class="table table-bordered table-striped">  
+        <thead>  
+            <tr class="text-center text-uppercase">  
+                <th>Bookid</th>  
+                <th>Title</th>  
+                <th>Author </th>  
+                <th>Description </th>  
+                <th>Publisher</th>  
+                <th>Price</th>  
+            </tr>  
+        </thead>  
+        <tbody>  
+         <tbody>
+          <tr *ngIf="bookobj"  >
+            <td>{{bookobj.bookid }}</td>
+            <td>{{bookobj.title|uppercase}}</td>
+            <td>{{bookobj.author | uppercase}}</td>
+            <td>{{bookobj.description | uppercase}}</td>
+            <td>{{bookobj.publisher | uppercase}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div >
+    <br>
+    <div *ngIf="!bookobj">
+      <h1>{{Mess}}</h1>
+   </div> 
+    <br>
+    <hr>
+    <br>
+
+ <!-- <div >  
+  <h3 class="text-center text-uppercase">List of Books</h3>  
+  <table class="table table-bordered table-striped">  
+      <thead>  
+          <tr class="text-center text-uppercase">  
+              <th>Bookid</th>  
+              <th>Title</th>  
+              <th>Author </th>  
+              <th>Description </th>  
+                
+          </tr>  
+      </thead>  
+      <tbody>      
+        <tr *ngIf="bookobj">
+          <td>{{bookobj.bookid}}</td>
+          <td>{{bookobj.title}}</td>
+          <td>{{bookobj.author }}</td>
+          <td>{{bookobj. description}}</td>
+        </tr>
+      
+      </tbody>
+    </table>
+  </div > -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

@@ -1,0 +1,59 @@
+<form #UserForm="ngForm" (ngSubmit)="RegisterData(UserForm.value)">
+    <br>
+    <div>
+        <label for="">
+            UserName
+        </label>
+        <input type="text" name="txtUserName" ngModel>
+    </div>
+
+    <div>
+        <label for="">
+            Password
+        </label>
+        <input type="password" name="txtPassword" ngModel>
+    </div>
+
+    <div>
+        <label for="">
+            Age
+        </label>
+        <input type="number" name="txtAge" ngModel>
+    </div>
+    <br>
+    <div>
+        <label>Gender</label>
+        <div>
+            <label class="radio-inline">
+                <input type="radio" name="gender"  value="male" ngModel>
+                Male
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="gender" value="female" ngModel>
+                Female
+            </label>
+        </div>
+    </div>
+    <br>
+    <div class="form-group">
+        <label for="Nationality">Nationality</label>
+        <select value="1" id="Nationality" name="Nationality" ngModel>
+            <option value="" selected hidden>Choose Here</option>
+            <option value="1">Indian</option>
+            <option value="2">American</option>
+            <option value="3">Chinese</option>
+            <option value="4">Australian</option>
+        </select>
+    </div>
+    <br>
+    <div>
+        <label for="">
+            Date
+        </label>
+        <input type="date" name="Date" ngModel>
+    </div>
+    <br>
+    <div>
+        <input type="submit" value="Register" ngModel>
+    </div>
+</form>

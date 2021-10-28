@@ -1,0 +1,56 @@
+<p>product-list works!</p>
+<br><hr>
+<br>
+<style>
+    table{
+        border:2px solid black;
+        border-collapse: collapse;
+        font-size: 2em;
+
+    }
+    th
+    {
+        color:blue;
+        font-weight: bolder;
+    }
+    td
+    {
+        color:black;
+        font-weight: bolder;
+    }
+    th,td,tr{
+        border: 2px solid black;
+        border-collapse: collapse;
+        margin:1px 1px 1px 1px;
+        padding:6px 16px 6px 16px;
+
+    }
+</style>
+
+
+<h1 style="font-size: 4em;font-weight: bolder;text-align: center;color: blue;"><u>Product Details</u></h1>
+<br>
+<hr>
+<br>
+<div style="margin-left: 40em;">
+    <div><button (click)="ProductDetails()"><p style="font-weight: bolder;font-size: 2em;color: brown;">Product Details</p></button>
+    </div>
+<br>
+<br>
+<table>
+        <thead>
+            <tr>   
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            </tr>
+      </thead>
+    <tbody>
+        <tr *ngFor="let product of temp">
+            <td><a [routerLink]="['/Product',product.productId]">{{product.productId}}</a></td>
+            <td>{{product.name}}</td>
+            <td>{{product.price}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

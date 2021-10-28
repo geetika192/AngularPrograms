@@ -1,0 +1,27 @@
+<p>sign-up works!</p>
+<hr>
+<br>
+<div style="margin-left: 30em;">
+<form [formGroup]="frmGroup" (ngSubmit)="LoginData(frmGroup.value)">
+    <div>
+        <label>User Name </label>
+        <input type="text" FormControlName="Username">
+    </div>
+    <br>
+    <div>
+        <label>Password </label>
+        <input type="password" FormControlName="Password">
+    </div>
+    <br>
+    <div>
+        <label>Age </label>
+        <input type="number" FormControlName="Age">
+    </div>
+    <br>
+    <div>
+        <input type="submit" value="Register">
+    </div>
+</form>
+</div>
+<br>
+<hr>

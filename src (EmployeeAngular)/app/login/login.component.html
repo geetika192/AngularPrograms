@@ -1,0 +1,23 @@
+<form #UserForm="ngForm" (ngSubmit)="RegisterData(UserForm.value)">
+    <br>
+    <div>
+        <label for="">
+            UserName
+        </label>
+        <input type="text" name="txtUserName" ngModel>
+    </div>
+
+    <div>
+        <label for="">
+            Password
+        </label>
+        <input type="password" name="txtPassword" ngModel>
+    </div>
+
+    <div>
+        <input type="submit" value="Login">
+    </div>
+   
+</form>
+
+

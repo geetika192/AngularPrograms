@@ -1,0 +1,21 @@
+
+<button (click)=" ProductDetails()">ProductList</button>  
+
+<h1>Product Details</h1>
+<table>
+    <head>
+       <title>product</title>
+    </head>
+    <body>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>price</th>
+        </tr>
+        <tr *ngFor="let i of temp">
+            <td><a [routerLink]="['/Product',i.productId]">{{i.Name}}</a></td>
+            <td>{{i.Name}}</td>
+            <td>{{i.price}}</td>
+        </tr>
+    </body>
+</table>

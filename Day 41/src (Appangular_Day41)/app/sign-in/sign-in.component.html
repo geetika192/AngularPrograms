@@ -1,0 +1,41 @@
+<div class="row pt-5">
+  <div class="col-md-6 mx-auto">
+    <div class="card rounded-0">
+      <div class="card-header">
+        <h3 class="mb-0">Sign In</h3>
+
+      </div>
+      <div class="card-body">
+        <form class="form" #loginForm="ngForm">
+
+         
+
+          <div class="form-group">
+            <label form="">Name</label>
+            <input [(ngModel)]="userSignInData.Name" name="Name" type="text" class="form-control rounded-0"
+              #Name="ngModel" required>
+            <div style="background-color: white; border: 0px;" *ngIf="Name.invalid && (Name.dirty || Name.touched)"
+              class="alert alert-danger">
+              <div style="color: red;" *ngIf="Name.errors?.required">
+                Name is required !
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label form="">Password</label>
+            <input [(ngModel)]="userSignInData.password" name="password" type="text" class="form-control rounded-0"
+              #password="ngModel" required>
+            <div style="background-color: white; border: 0px;"
+              *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+              <div style="color: red;" *ngIf="password.errors?.required">
+                Password is required !
+              </div>
+            </div>
+          </div>
+          <button (click)="userSignIn()" type="button" class="btn btn-success float-right" [disabled]="!loginForm.form.valid">Log In</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
